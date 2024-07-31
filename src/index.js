@@ -1,9 +1,12 @@
-const app = require('./app');
+// src/index.js
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
+const app = require('./app');
 
+// Load environment variables from .env file
 dotenv.config();
 
+// Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
